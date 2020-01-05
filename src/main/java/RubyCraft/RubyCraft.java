@@ -143,7 +143,7 @@ public class RubyCraft {
 						ItemLista.madera_verde= new BlockItem(BloqueLista.madera_verde, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("madera_verde")),
 						ItemLista.minero= new BlockItem(BloqueLista.minero, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("minero"))
 										
-			
+			 
 
 
 		
