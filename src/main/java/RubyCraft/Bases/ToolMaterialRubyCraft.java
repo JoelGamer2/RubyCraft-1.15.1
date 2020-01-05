@@ -30,7 +30,7 @@ public enum ToolMaterialRubyCraft implements IItemTier
 		this.enchantability = enchantability;
 		this.repairMaterial = repairMaterial;
 		
-	}
+	} 
 
 	@Override
 	public float getAttackDamage() 
