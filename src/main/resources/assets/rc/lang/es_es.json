@@ -120,5 +120,9 @@
 "block.rc.coral_rosa": "Coral Rosa",
 "block.rc.coral_rosa_muerto": "Coral Rosa Muerto",
 "block.rc.prueba": "Bloque de pruebas de desarrolador",
-"block.rc.minero": "Minador"
+"block.rc.minero": "Minador",
+
+
+
+"death.attack.Troleo": "%1$s a Muerto por descuidarse."
 }

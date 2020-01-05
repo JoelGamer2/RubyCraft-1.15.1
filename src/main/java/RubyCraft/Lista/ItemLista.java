@@ -1,6 +1,9 @@
 package RubyCraft.Lista;
 
+import java.util.function.Predicate;
+
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class ItemLista {
 
@@ -28,16 +31,56 @@ public class ItemLista {
 	public static Item engranaje_de_diamante;
 	public static Item pompa_de_imunidad;
 	public static Item anillo_angelico;
+	public static Item Flecha_de_ruby;
 	
 	//Comida
     public static Item pan_de_calabaza;
 	public static Item huevo_frito;
 	public static Item manzana_de_diamante;
 
+	//Herramientas
+	public static Item Pico_de_ruby;
+	public static Item espada_de_ruby;
+	public static Item azada_de_ruby;
+	public static Item pala_de_ruby;
+	public static Item hacha_de_ruby;
+	public static Item tijera_de_ruby;
+	public static Item arco_de_ruby;
+	
+	public static Item pico_de_zafiro;
+	public static Item espada_de_zafiro;
+	public static Item azada_de_zafiro;
+	public static Item pala_de_zafiro;
+	public static Item hacha_de_zafiro;
+	public static Item tijera_de_zafiro;
+	public static Item arco_de_zafiro;
+	
+	public static Item pico_de_cobre;
+	public static Item espada_de_cobre;
+	public static Item azada_de_cobre;
+	public static Item pala_de_cobre;
+	public static Item hacha_de_cobre;
+	public static Item tijera_de_cobre;
+	
+	public static Item espada_de_platino;
 	
 	
+	//Armaduras
 	
+	public static Item casco_de_ruby;
+	public static Item pechera_de_ruby;
+	public static Item grebas_de_ruby;
+	public static Item botas_de_ruby;
+
+	public static Item casco_de_zafiro;
+	public static Item pechera_de_zafiro;
+	public static Item grebas_de_zafiro;
+	public static Item botas_de_zafiro;
 	
+	public static Item casco_de_uranio;
+	public static Item pechera_de_uranio;
+	public static Item pantacas_de_uranio;
+	public static Item botas_de_uranio;
 	
 	
 	

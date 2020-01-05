@@ -3,22 +3,32 @@ package RubyCraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import RubyCraft.Bases.ArmorMaterialRubyCraft;
+import RubyCraft.Bases.Hacha;
+import RubyCraft.Bases.Pico;
+import RubyCraft.Bases.ToolMaterialRubyCraft;
+import RubyCraft.Bloques.Bloque_de_Regeneracion;
+import RubyCraft.Bloques.Bloque_de_diamante_trol;
+import RubyCraft.Bloques.Bloque_de_veneno;
+import RubyCraft.Items.Arco_de_ruby;
+import RubyCraft.Items.Flecha_de_ruby;
+import RubyCraft.Items.Manzana_de_diamante;
 import RubyCraft.Lista.BloqueLista;
 import RubyCraft.Lista.ItemLista;
 import net.minecraft.block.Block;
 import net.minecraft.block.GlassBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.BowItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.Potions;
+import net.minecraft.item.ShearsItem;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -85,13 +95,47 @@ public class RubyCraft {
 				ItemLista.engranaje_de_diamante = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("engranaje_de_diamante")),
 				ItemLista.pompa_de_imunidad = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pompa_de_imunidad")),
 				ItemLista.anillo_angelico = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("anillo_angelico")),
-				
+				ItemLista.Flecha_de_ruby = new Flecha_de_ruby(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("flecha_de_ruby")),
+
+				//Comida
 		        ItemLista.pan_de_calabaza = new Item(new Item.Properties().group(RubyCraftTab).food(Comidas.pan_de_calabaza)).setRegistryName(location("pan_de_calabaza")),
 		        ItemLista.huevo_frito = new Item(new Item.Properties().group(RubyCraftTab).food(Comidas.huevo_frito)).setRegistryName(location("huevo_frito")),
-		        ItemLista.manzana_de_diamante = new Item(new Item.Properties().group(RubyCraftTab).food(Comidas.manzana_de_diamante)).setRegistryName(location("manzana_de_diamante")),
+		        ItemLista.manzana_de_diamante = new Manzana_de_diamante(new Item.Properties().group(RubyCraftTab).food(Comidas.manzana_de_diamante)).setRegistryName(location("manzana_de_diamante")),
 		        
+		        		
 		        
-		        
+		        //Heramientas
+		        		ItemLista.hacha_de_ruby = new Hacha(ToolMaterialRubyCraft.HerramientaRuby, 6.0f, -3.0f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("hacha_de_ruby")),
+		        		ItemLista.azada_de_ruby = new HoeItem(ToolMaterialRubyCraft.HerramientaRuby, 1.0f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("azada_de_ruby")),
+		        		ItemLista.Pico_de_ruby = new Pico(ToolMaterialRubyCraft.HerramientaRuby, 1, 1.0f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pico_de_ruby")),
+		        		ItemLista.pala_de_ruby = new ShovelItem(ToolMaterialRubyCraft.HerramientaRuby, 0.5f, -2.5f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pala_de_ruby")),
+		    			ItemLista.espada_de_ruby = new SwordItem(ToolMaterialRubyCraft.HerramientaRuby, 7, -2.4f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("espada_de_ruby")),
+		    			ItemLista.tijera_de_ruby = new ShearsItem(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("tijera_de_ruby")),
+		    			ItemLista.arco_de_ruby = new Arco_de_ruby(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("arco_de_ruby")),
+		    					
+		    			ItemLista.hacha_de_zafiro = new Hacha(ToolMaterialRubyCraft.HerramientaZafiro, 6.0f, -3.0f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("hacha_de_zafiro")),
+				        ItemLista.azada_de_zafiro = new HoeItem(ToolMaterialRubyCraft.HerramientaZafiro, 1.0f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("azada_de_zafiro")),
+				        ItemLista.pico_de_zafiro = new Pico(ToolMaterialRubyCraft.HerramientaZafiro, 1, 1.0f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pico_de_zafiro")),
+				        ItemLista.pala_de_zafiro = new ShovelItem(ToolMaterialRubyCraft.HerramientaZafiro, 0.5f, -2.5f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pala_de_zafiro")),
+				    	ItemLista.espada_de_zafiro = new SwordItem(ToolMaterialRubyCraft.HerramientaZafiro, 7, -2.4f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("espada_de_zafiro")),
+				    	ItemLista.tijera_de_zafiro = new ShearsItem(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("tijera_de_zafiro")),
+                        ItemLista.arco_de_zafiro= new BowItem(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("arco_de_zafiro")),
+				    	
+				    	
+				    	//Armaduras
+				    	
+				    	
+				    	ItemLista.casco_de_ruby = new ArmorItem(ArmorMaterialRubyCraft.ruby, EquipmentSlotType.HEAD, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("casco_de_ruby")),
+				    	ItemLista.pechera_de_ruby = new ArmorItem(ArmorMaterialRubyCraft.ruby, EquipmentSlotType.CHEST, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pechera_de_ruby")),
+				    	ItemLista.grebas_de_ruby = new ArmorItem(ArmorMaterialRubyCraft.ruby, EquipmentSlotType.LEGS, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("grebas_de_ruby")),
+				    	ItemLista.botas_de_ruby = new ArmorItem(ArmorMaterialRubyCraft.ruby, EquipmentSlotType.FEET, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("botas_de_ruby")),
+				    	
+				    	
+				        ItemLista.casco_de_zafiro = new ArmorItem(ArmorMaterialRubyCraft.zafiro, EquipmentSlotType.HEAD, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("casco_de_zafiro")),
+						ItemLista.pechera_de_zafiro = new ArmorItem(ArmorMaterialRubyCraft.zafiro, EquipmentSlotType.CHEST, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pechera_de_zafiro")),
+						ItemLista.grebas_de_zafiro = new ArmorItem(ArmorMaterialRubyCraft.zafiro, EquipmentSlotType.LEGS, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("grebas_de_zafiro")),
+						ItemLista.botas_de_zafiro = new ArmorItem(ArmorMaterialRubyCraft.zafiro, EquipmentSlotType.FEET, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("botas_de_zafiro")),
+		               //Bloque
 		                ItemLista.bloque_de_ruby = new BlockItem(BloqueLista.bloque_de_ruby, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("bloque_de_ruby")),
 	                    ItemLista.Ladrillo_Marino= new BlockItem(BloqueLista.Ladrillo_Marino, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("ladrillomarino")),
 						ItemLista.Ladrillo_de_obsidiana= new BlockItem(BloqueLista.Ladrillo_de_obsidiana, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("ladrillodeobsidiana")),
@@ -143,7 +187,7 @@ public class RubyCraft {
 						ItemLista.madera_verde= new BlockItem(BloqueLista.madera_verde, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("madera_verde")),
 						ItemLista.minero= new BlockItem(BloqueLista.minero, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("minero"))
 										
-			 
+						
 
 
 		
@@ -165,13 +209,13 @@ public class RubyCraft {
 					BloqueLista.Bloque_de_Zafiro= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_zafiro")),
 					BloqueLista.Bloque_de_azucar= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_azucar")),
 					BloqueLista.bloque_de_blaze= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_blaze")),
-					BloqueLista.Bloque_de_Diamante_Trol= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_diamante_trol")),
+					BloqueLista.Bloque_de_Diamante_Trol= new Bloque_de_diamante_trol(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_diamante_trol")),
 					BloqueLista.Bloque_de_uranio= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_uranio")),
 					BloqueLista.Ladrillo_del_Bosque= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("ladrillo_del_bosque")),
-					BloqueLista.Bloque_de_Regeneracion= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_regeneracion")),
+					BloqueLista.Bloque_de_Regeneracion= new Bloque_de_Regeneracion(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_regeneracion")),
 					BloqueLista.BloquedeEnderPearld= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloquedeenderpearld")),
 					BloqueLista.bloque_de_ojo_de_enderman= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_ojo_de_enderman")),
-					BloqueLista.Bloque_de_veneno= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_veneno")),
+					BloqueLista.Bloque_de_veneno= new Bloque_de_veneno(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("bloque_de_veneno")),
 					BloqueLista.ladrillo_de_granito= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("ladrillo_de_granito")),
 					BloqueLista.ladrillo_de_andesita= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("ladrillo_de_andesita")),
 					BloqueLista.ladrillo_de_diorita= new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0F).sound(SoundType.METAL)).setRegistryName(location("ladrillo_de_diorita")),
@@ -211,6 +255,9 @@ public class RubyCraft {
 			
 			
 					);
+			
+			logger.info("Bloques Registraos");
+
 		}
 		
 		private static ResourceLocation location(String nombre) {

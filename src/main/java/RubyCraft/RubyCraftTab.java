@@ -1,6 +1,8 @@
 package RubyCraft;
 
+import RubyCraft.Lista.BloqueLista;
 import RubyCraft.Lista.ItemLista;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -14,7 +16,7 @@ public class RubyCraftTab extends ItemGroup {
 	@Override
 	public ItemStack createIcon() {
 		
-		return new ItemStack(ItemLista.ruby);
+		return new ItemStack(BlockItem.getItemFromBlock(BloqueLista.bloque_de_ruby));
 	}
 	
 	
