@@ -1,0 +1,17 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="[30,)" #mandatory (28 is current forge version)
+issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId="rc" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="RubyCraft" #mandatory
+#updateJSONURL="http://myurl.me/" #optional
+#displayURL="http://example.com/" #optional
+#logoFile="examplemod.png" #optional
+credits="Nadie XD" #optional
+authors="Joel" #optional
+description='''
+ESTE MOD ESTA EN PROCESO DE ACTUALIZACION AUN
+'''
+
