@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:Bloque_de_azucar"}
+	 "": {"model": "rc:block/bloque_de_azucar"}
 	 }
 }

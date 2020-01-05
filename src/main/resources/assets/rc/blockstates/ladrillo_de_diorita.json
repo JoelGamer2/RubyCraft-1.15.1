@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:ladrillo_de_diorita"}
+	 "": {"model": "rc:block/ladrillo_de_diorita"}
 	 }
 }

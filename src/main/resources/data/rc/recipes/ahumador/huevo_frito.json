@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:egg"
+  },
+  "result": "rc:huevo_frito",
+  "experience": 0.35,
+  "cookingtime": 100
+}

@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:prueba"}
+	 "": {"model": "rc:block/prueba"}
 	 }
 }

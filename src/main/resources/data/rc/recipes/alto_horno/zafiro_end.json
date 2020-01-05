@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "rc:mena_de_zafiro_end"
+  },
+  "result": "rc:zafiro",
+  "experience": 0.35,
+  "cookingtime": 100
+}

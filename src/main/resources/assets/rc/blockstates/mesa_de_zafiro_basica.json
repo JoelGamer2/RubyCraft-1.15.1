@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:mesa_de_zafiro_basica"}
+	 "": {"model": "rc:block/mesa_de_zafiro_basica"}
 	 }
 }

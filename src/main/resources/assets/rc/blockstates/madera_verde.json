@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:madera_verde"}
+	 "": {"model": "rc:block/madera_verde"}
 	 }
 }

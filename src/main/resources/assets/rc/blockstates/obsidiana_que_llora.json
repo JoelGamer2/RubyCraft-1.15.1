@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:obsidiana_que_llora"}
+	 "": {"model": "rc:block/obsidiana_que_llora"}
 	 }
 }

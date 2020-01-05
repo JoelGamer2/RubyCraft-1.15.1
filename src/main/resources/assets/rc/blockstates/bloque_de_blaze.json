@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:bloque_de_blaze"}
+	 "": {"model": "rc:block/bloque_de_blaze"}
 	 }
 }

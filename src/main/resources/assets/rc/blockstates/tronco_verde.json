@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:tronco_verde"}
+	 "": {"model": "rc:block/tronco_verde"}
 	 }
 }

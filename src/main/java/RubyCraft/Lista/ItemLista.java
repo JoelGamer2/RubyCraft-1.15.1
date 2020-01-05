@@ -1,6 +1,5 @@
 package RubyCraft.Lista;
 
-import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 
 public class ItemLista {
@@ -35,5 +34,65 @@ public class ItemLista {
 	public static Item huevo_frito;
 	public static Item manzana_de_diamante;
 
+	
+	
+	
+	
+	
+	
+	
+	//Bloques en items vaya por dios
+	public static Item Ladrillo_Marino;
+	public static Item bloque_de_ruby;
+	public static Item Ladrillo_de_obsidiana;
+	public static Item Bloqueluminiscente;
+	public static Item Bloque_de_Zafiro;
+	public static Item Bloque_de_azucar;
+	public static Item bloque_de_blaze;
+	public static Item Bloque_de_Diamante_Trol;
+	public static Item Bloque_de_uranio;
+	public static Item Ladrillo_del_Bosque;
+	public static Item Bloque_de_comandos;
+	public static Item Bloque_de_Regeneracion;
+	public static Item BloquedeEnderPearld;
+	public static Item bloque_de_ojo_de_enderman;
+	public static Item Bloque_de_veneno;
+	public static Item ladrillo_de_granito;
+	public static Item ladrillo_de_andesita;
+	public static Item ladrillo_de_diorita;
+	public static Item ladrillo_de_infiedra;
+	public static Item bloque_de_pedernal;
+	public static Item obsidiana_que_llora;
+	public static Item Cuarzo_azul;
+	public static Item Cuarzo_verde;
+	public static Item Cuarzo_rojo;
+	public static Item mena_de_ruby;
+	public static Item mena_de_zafiro;
+	public static Item mena_de_zafiro_end;
+	public static Item mena_de_ruby_end;
+	public static Item mesa_de_conjuraciones;
+	public static Item bloque_de_cobre;
+	public static Item cristal_azul_claro;
+	public static Item cristal_verde_lima;
+	public static Item bloque_de_caca;
+	public static Item generar_dragon;
+	public static Item mesa_de_zafiro_basica;
+	public static Item mesa_de_zafiro;
+	public static Item bloque_galactico;
+	public static Item calabaza_espectral;
+	public static Item bloque_reforzado_tier_1;
+	public static Item bloque_reforzado_tier_2;
+	public static Item bloque_reforzado_tier_3;
+	public static Item bloque_reforzado_tier_4;
+	public static Item bloque_reforzado_tier_5;
+	public static Item bloque_de_platino;
+	public static Item mena_de_platino;
+	public static Item bloque_de_actualizaciones;
+	public static Item prueba;
+	public static Item tronco_azul;
+	public static Item tronco_verde;
+	public static Item madera_azul;
+	public static Item madera_verde;
+	public static Item minero;
 
 }

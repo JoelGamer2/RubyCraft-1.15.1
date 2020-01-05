@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "rc:blocks/Cuarzo_rojo"
+        "all": "rc:blocks/cuarzo_rojo"
     }
  }

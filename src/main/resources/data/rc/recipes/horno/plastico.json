@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rc:boladeresina"
+  },
+  "result": "rc:plastico",
+  "experience": 0.35,
+  "cookingtime": 200
+}

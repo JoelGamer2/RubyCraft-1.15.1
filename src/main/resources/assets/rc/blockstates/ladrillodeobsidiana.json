@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:ladrillodeobsidiana"}
+	 "": {"model": "rc:block/ladrillodeobsidiana"}
 	 }
 }

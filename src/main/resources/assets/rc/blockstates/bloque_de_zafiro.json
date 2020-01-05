@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:bloque_de_zafiro"}
+	 "": {"model": "rc:block/bloque_de_zafiro"}
 	 }
 }

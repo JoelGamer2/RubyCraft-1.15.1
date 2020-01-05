@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:calabaza_espectral"}
+	 "": {"model": "rc:block/calabaza_espectral"}
 	 }
 }

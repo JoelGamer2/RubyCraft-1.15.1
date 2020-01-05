@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:cristal_verde_lima"}
+	 "": {"model": "rc:block/cristal_verde_lima"}
 	 }
 }

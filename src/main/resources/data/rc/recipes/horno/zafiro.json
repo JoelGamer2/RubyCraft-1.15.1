@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rc:mena_de_zafiro"
+  },
+  "result": "rc:zafiro",
+  "experience": 0.35,
+  "cookingtime": 200
+}

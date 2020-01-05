@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:mena_de_ruby"}
+	 "": {"model": "rc:block/mena_de_ruby"}
 	 }
 }

@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:bloque_reforzado_tier_3"}
+	 "": {"model": "rc:block/bloque_reforzado_tier_3"}
 	 }
 }

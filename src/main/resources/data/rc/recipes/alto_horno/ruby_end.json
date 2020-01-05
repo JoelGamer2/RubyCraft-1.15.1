@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "rc:mena_de_ruby_end"
+  },
+  "result": "rc:ruby",
+  "experience": 0.35,
+  "cookingtime": 100
+}

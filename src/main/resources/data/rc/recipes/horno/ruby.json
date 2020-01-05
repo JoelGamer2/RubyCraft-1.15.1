@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rc:mena_de_ruby"
+  },
+  "result": "rc:ruby",
+  "experience": 0.35,
+  "cookingtime": 200
+}

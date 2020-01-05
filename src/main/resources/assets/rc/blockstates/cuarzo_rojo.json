@@ -1,5 +1,5 @@
 {
      "variants": {
-	 "normal": {"model": "rc:cuarzo_rojo"}
+	 "": {"model": "rc:block/cuarzo_rojo"}
 	 }
 }
