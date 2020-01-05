@@ -3,6 +3,7 @@ package RubyCraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import RubyCraft.Actualizaciones.Buscar_Actualizaciones;
 import RubyCraft.Bases.ArmorMaterialRubyCraft;
 import RubyCraft.Bases.Hacha;
 import RubyCraft.Bases.Pico;
@@ -10,8 +11,9 @@ import RubyCraft.Bases.ToolMaterialRubyCraft;
 import RubyCraft.Bloques.Bloque_de_Regeneracion;
 import RubyCraft.Bloques.Bloque_de_diamante_trol;
 import RubyCraft.Bloques.Bloque_de_veneno;
+import RubyCraft.Eeventos.Iniciar;
 import RubyCraft.Items.Arco_de_ruby;
-import RubyCraft.Items.Flecha_de_ruby;
+import RubyCraft.Items.Arco_de_zafiro;
 import RubyCraft.Items.Manzana_de_diamante;
 import RubyCraft.Lista.BloqueLista;
 import RubyCraft.Lista.ItemLista;
@@ -22,7 +24,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.BowItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -43,7 +44,8 @@ public class RubyCraft {
 
 	public static RubyCraft instance;
 	public static final String modid = "rc";
-	private static final Logger logger = LogManager.getLogger("RubyCraft");
+	public static String version = "1.0";
+	public static final Logger logger = LogManager.getLogger("RubyCraft");
 	
 	public static final ItemGroup RubyCraftTab = new RubyCraftTab();
 	public RubyCraft() {
@@ -51,6 +53,7 @@ public class RubyCraft {
 		
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
+		Iniciar.iniciar_eventos();
 		
 		MinecraftForge.EVENT_BUS.register(this);
 
@@ -70,7 +73,7 @@ public class RubyCraft {
 		@SubscribeEvent
 	public static void RegistraItems(final RegistryEvent.Register<Item> event) {
 
-
+			Buscar_Actualizaciones.MirarActualizaciones();
 		event.getRegistry().registerAll(
 				
 				ItemLista.ruby = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("ruby")),
@@ -95,7 +98,6 @@ public class RubyCraft {
 				ItemLista.engranaje_de_diamante = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("engranaje_de_diamante")),
 				ItemLista.pompa_de_imunidad = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pompa_de_imunidad")),
 				ItemLista.anillo_angelico = new Item(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("anillo_angelico")),
-				ItemLista.Flecha_de_ruby = new Flecha_de_ruby(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("flecha_de_ruby")),
 
 				//Comida
 		        ItemLista.pan_de_calabaza = new Item(new Item.Properties().group(RubyCraftTab).food(Comidas.pan_de_calabaza)).setRegistryName(location("pan_de_calabaza")),
@@ -119,7 +121,7 @@ public class RubyCraft {
 				        ItemLista.pala_de_zafiro = new ShovelItem(ToolMaterialRubyCraft.HerramientaZafiro, 0.5f, -2.5f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("pala_de_zafiro")),
 				    	ItemLista.espada_de_zafiro = new SwordItem(ToolMaterialRubyCraft.HerramientaZafiro, 7, -2.4f, new Item.Properties().group(RubyCraftTab)).setRegistryName(location("espada_de_zafiro")),
 				    	ItemLista.tijera_de_zafiro = new ShearsItem(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("tijera_de_zafiro")),
-                        ItemLista.arco_de_zafiro= new BowItem(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("arco_de_zafiro")),
+                        ItemLista.arco_de_zafiro= new Arco_de_zafiro(new Item.Properties().group(RubyCraftTab)).setRegistryName(location("arco_de_zafiro")),
 				    	
 				    	
 				    	//Armaduras

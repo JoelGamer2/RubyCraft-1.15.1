@@ -31,7 +31,6 @@ public class ItemLista {
 	public static Item engranaje_de_diamante;
 	public static Item pompa_de_imunidad;
 	public static Item anillo_angelico;
-	public static Item Flecha_de_ruby;
 	
 	//Comida
     public static Item pan_de_calabaza;

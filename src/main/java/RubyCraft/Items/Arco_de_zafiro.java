@@ -21,14 +21,14 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 
-public class Arco_de_ruby extends ShootableItem {
-   public Arco_de_ruby(Item.Properties builder) {
+public class Arco_de_zafiro extends ShootableItem {
+   public Arco_de_zafiro(Item.Properties builder) {
       super(builder);
       this.addPropertyOverride(new ResourceLocation("pull"), (p_210310_0_, p_210310_1_, p_210310_2_) -> {
          if (p_210310_2_ == null) {
             return 0.0F;
          } else {
-            return !(p_210310_2_.getActiveItemStack().getItem() instanceof Arco_de_ruby) ? 0.0F : (float)(p_210310_0_.getUseDuration() - p_210310_2_.getItemInUseCount()) / 20.0F;
+            return !(p_210310_2_.getActiveItemStack().getItem() instanceof Arco_de_zafiro) ? 0.0F : (float)(p_210310_0_.getUseDuration() - p_210310_2_.getItemInUseCount()) / 20.0F;
          }
       });
       this.addPropertyOverride(new ResourceLocation("pulling"), (_0, _1, _2) -> {
@@ -62,7 +62,7 @@ public class Arco_de_ruby extends ShootableItem {
                   AbstractArrowEntity abstractarrowentity = arrowitem.createArrow(worldIn, itemstack, playerentity);
                   abstractarrowentity = customeArrow(abstractarrowentity);
                   abstractarrowentity.shoot(playerentity, playerentity.rotationPitch, playerentity.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                  abstractarrowentity.setDamage(10.0F);
+                  abstractarrowentity.setDamage(15.0F);
                   if (f == 1.0F) {
                      abstractarrowentity.setIsCritical(true);
                   }
