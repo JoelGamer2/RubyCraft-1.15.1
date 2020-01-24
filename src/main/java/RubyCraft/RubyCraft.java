@@ -56,6 +56,7 @@ public class RubyCraft {
 		Iniciar.iniciar_eventos();
 		
 		MinecraftForge.EVENT_BUS.register(this);
+	
 
 	}
 	
